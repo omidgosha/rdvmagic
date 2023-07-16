@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "My Extension",
+    "version": "1.0",
+    "permissions": [
+        "tabs",
+        "https://pprdv.interieur.gouv.fr/*"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://pprdv.interieur.gouv.fr/booking/create/989/*"
+            ],
+            "js": [
+                "page1Content.js",
+                "page2Content.js"
+            ]
+        }
+    ]
+}
